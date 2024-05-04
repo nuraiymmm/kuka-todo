@@ -1,0 +1,66 @@
+name: my_todo_app
+description: "A new Flutter project."
+# Предотвращает случайную публикацию пакета на pub.dev через `flutter pub publish`. Предпочтительно для частных пакетов.
+publish_to: 'none'
+# Версия и номер сборки вашего приложения.
+# Версия состоит из трех чисел, разделенных точками, например, 1.2.43
+# за которым может следовать необязательный номер сборки, разделенный знаком "+".
+# Как версию, так и номер сборки можно переопределить в flutter build, указав соответственно --build-name и --build-number.
+# В Android build-name используется как versionName, а build-number как versionCode.
+# Подробнее о версионировании Android см. На https://developer.android.com/studio/publish/versioning
+# В iOS build-name используется как CFBundleShortVersionString, а build-number как CFBundleVersion.
+# Подробнее о версионировании iOS см. На https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# В Windows build-name используется как основные, минорные и патч-части продукта и версий файлов, а build-number используется как суффикс сборки.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+# Зависимости указывают на другие пакеты, необходимые для работы вашего пакета.
+# Для автоматического обновления зависимостей пакета до последних версий
+# можно выполнить flutter pub upgrade --major-versions. Кроме того,
+# зависимости можно обновить вручную, изменяя номера версий ниже на
+# последние версии, доступные на pub.dev. Чтобы увидеть, какие зависимости имеют более новые версии,
+# выполните flutter pub outdated.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # Ниже приведен шрифт иконок Cupertino, который включается в ваше приложение.
+  # Используйте с классом CupertinoIcons для иконок стиля iOS.
+  cupertino_icons: ^1.0.6
+  image_picker: ^0.8.4+3  # Добавленная зависимость
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Пакет "flutter_lints" ниже содержит набор рекомендуемых линтов для
+  # поощрения хороших практик программирования. Набор линтов, предоставленный пакетом, активирован
+  # в файле `analysis_options.yaml`, расположенном в корне вашего
+  # пакета. См. Этот файл для получения информации о деактивации конкретных правил линтов и активации дополнительных.
+  flutter_lints: ^3.0.0
+
+# Для информации о генерической части Dart этого файла см. Следующую страницу: https://dart.dev/tools/pub/pubspec
+
+# Нижеследующий раздел является специфичным для пакетов Flutter.
+flutter:
+
+  # Нижеследующая строка гарантирует, что шрифт Material Icons
+  # включен в ваше приложение, чтобы вы могли использовать иконки в
+  # материальные иконки класса.
+  uses-material-design: true
+
+  # Для добавления ресурсов в ваше приложение добавьте раздел assets, как показано ниже:
+  assets:
+    - assets/images/
+  #   - images/a_dot_ham.jpeg
+
+  # Визуальный манифест настройки для вашего приложения.
+  # Для получения дополнительной информации, см.:
+  #   https://flutter.dev/desktop#visual-studio-code
+  # icons:
+  #   64x64: images/logo.png
+  #   128x128: images/logo_2x.png
+  #   512x512: images/logo.png
